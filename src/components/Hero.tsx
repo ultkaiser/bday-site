@@ -96,7 +96,7 @@ const Hero: React.FC = () => {
           
           <div className="relative">
             <p className="text-2xl md:text-4xl text-gray-700 mb-8 font-light leading-relaxed">
-              Today we celebrate someone truly
+              Today we celebrate my girl who's truly
               <span className="block text-3xl md:text-5xl font-semibold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent mt-2">
                 Extraordinary ✨
               </span>

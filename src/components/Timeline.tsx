@@ -6,22 +6,22 @@ const Timeline: React.FC = () => {
     {
       icon: Star,
       title: 'Born to Shine',
-      description: 'A beautiful soul entered this world',
-      year: '2015',
+      description: 'A beautiful soul entered this world and shes only for me',
+      year: '2003',
       color: 'bg-pink-500',
     },
     {
       icon: Gift,
       title: 'First Steps',
-      description: 'Taking those precious first steps into adventure',
-      year: '2016',
+      description: 'Taking those precious first steps into adventure(the year when im born for you)',
+      year: '2004',
       color: 'bg-purple-500',
     },
     {
       icon: Sparkles,
-      title: 'School Days Begin',
+      title: 'School Days Begin with me',
       description: 'Starting the journey of learning and friendship',
-      year: '2020',
+      year: '2016',
       color: 'bg-indigo-500',
     },
     {

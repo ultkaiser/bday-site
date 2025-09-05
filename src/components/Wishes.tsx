@@ -12,20 +12,20 @@ const Wishes: React.FC = () => {
   const [wishes, setWishes] = useState<Wish[]>([
     {
       id: 1,
-      name: "Mom & Dad",
-      message: "Wishing our beautiful daughter the most wonderful birthday! You bring so much joy to our lives every single day. ❤️",
+      name: "Vicky",
+      message: "Wishing Nicky the most wonderful birthday! You bring so much joy to my lives every single day. ❤️",
       timestamp: "2 hours ago"
     },
     {
       id: 2,
-      name: "Grandma",
-      message: "Happy birthday to my sweet granddaughter! May your special day be filled with magic and wonder.",
+      name: "Bujjluuu",
+      message: "Happy birthday to my sweetest Bujjluuuu! May your special day be filled with magic and wonder.",
       timestamp: "5 hours ago"
     },
     {
       id: 3,
-      name: "Best Friend Sarah",
-      message: "Happy birthday bestie! Can't wait to celebrate with you! You're the most amazing person I know! 🎉",
+      name: "8th class Nibba",
+      message: "Happy birthday Sweetie! Can't wait to celebrate with you! You're the most amazing person I know! 🎉",
       timestamp: "1 day ago"
     }
   ]);
