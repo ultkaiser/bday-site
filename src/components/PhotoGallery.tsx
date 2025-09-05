@@ -12,6 +12,8 @@ const PhotoGallery: React.FC = () => {
     '/photos/photo4.jpg',
     '/photos/photo5.jpg',
     '/photos/photo6.jpg',
+    '/photos/photo7.jpg',
+    '/photos/photo8.jpg',
   ];
 
   return (
