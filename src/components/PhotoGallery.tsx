@@ -4,14 +4,14 @@ import { X, Heart } from 'lucide-react';
 const PhotoGallery: React.FC = () => {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
 
-  // Using beautiful stock photos from Pexels
+  // Using photos from local photos folder
   const photos = [
-    'https://images.pexels.com/photos/1729797/pexels-photo-1729797.jpeg?auto=compress&cs=tinysrgb&w=500',
-    'https://images.pexels.com/photos/1857158/pexels-photo-1857158.jpeg?auto=compress&cs=tinysrgb&w=500',
-    'https://images.pexels.com/photos/1729798/pexels-photo-1729798.jpeg?auto=compress&cs=tinysrgb&w=500',
-    'https://images.pexels.com/photos/1743165/pexels-photo-1743165.jpeg?auto=compress&cs=tinysrgb&w=500',
-    'https://images.pexels.com/photos/1729797/pexels-photo-1729797.jpeg?auto=compress&cs=tinysrgb&w=500',
-    'https://images.pexels.com/photos/2072119/pexels-photo-2072119.jpeg?auto=compress&cs=tinysrgb&w=500',
+    '/photos/photo1.jpg',
+    '/photos/photo2.jpg',
+    '/photos/photo3.jpg',
+    '/photos/photo4.jpg',
+    '/photos/photo5.jpg',
+    '/photos/photo6.jpg',
   ];
 
   return (
@@ -26,17 +26,17 @@ const PhotoGallery: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
           {photos.map((photo, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:scale-105"
+              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:scale-105 aspect-square"
               onClick={() => setSelectedPhoto(photo)}
             >
               <img
                 src={photo}
                 alt={`Memory ${index + 1}`}
-                className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                 <Heart className="w-6 h-6 text-white animate-pulse" />

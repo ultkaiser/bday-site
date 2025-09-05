@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
   const [confetti, setConfetti] = useState<ConfettiPiece[]>([]);
   const [showMessage, setShowMessage] = useState(false);
   
-  const birthdayDate = new Date('2025-02-15');
+  const birthdayDate = new Date('2025-09-09');
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,

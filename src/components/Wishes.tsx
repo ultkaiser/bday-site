@@ -1,47 +1,17 @@
 import React, { useState } from 'react';
 import { MessageCircle, Heart, Star } from 'lucide-react';
-
-interface Wish {
-  id: number;
-  name: string;
-  message: string;
-  timestamp: string;
-}
+import { wishesStore } from '../utils/wishesStore';
 
 const Wishes: React.FC = () => {
-  const [wishes, setWishes] = useState<Wish[]>([
-    {
-      id: 1,
-      name: "Vicky",
-      message: "Wishing Nicky the most wonderful birthday! You bring so much joy to my lives every single day. ❤️",
-      timestamp: "2 hours ago"
-    },
-    {
-      id: 2,
-      name: "Bujjluuu",
-      message: "Happy birthday to my sweetest Bujjluuuu! May your special day be filled with magic and wonder.",
-      timestamp: "5 hours ago"
-    },
-    {
-      id: 3,
-      name: "8th class Nibba",
-      message: "Happy birthday Sweetie! Can't wait to celebrate with you! You're the most amazing person I know! 🎉",
-      timestamp: "1 day ago"
-    }
-  ]);
+  const [wishes, setWishes] = useState(wishesStore.getAllWishes());
 
   const [newWish, setNewWish] = useState({ name: '', message: '' });
 
   const handleSubmitWish = (e: React.FormEvent) => {
     e.preventDefault();
     if (newWish.name && newWish.message) {
-      const wish: Wish = {
-        id: wishes.length + 1,
-        name: newWish.name,
-        message: newWish.message,
-        timestamp: 'Just now'
-      };
-      setWishes([wish, ...wishes]);
+      wishesStore.addWish(newWish.name, newWish.message);
+      setWishes(wishesStore.getAllWishes());
       setNewWish({ name: '', message: '' });
     }
   };
